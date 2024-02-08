@@ -1,0 +1,46 @@
+// REUSABLE GRID SYSTEM
+
+.grid--1-cols {
+  grid-template-columns: 1fr;
+  gap: 8rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6rem;
+}
+
+.grid--center {
+  justify-items: center;
+}
+
+.grid--gap-huge {
+  gap: 24rem;
+
+  @include respond(tab-port) {
+    gap: 6rem;
+  }
+}
+
+//appears last in the code to verride all => in media queries
+.grid {
+  display: grid;
+  max-width: 114rem;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+}
